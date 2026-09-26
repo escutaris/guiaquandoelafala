@@ -29,14 +29,15 @@
   function mostrarAviso() {
     var css = document.createElement('style');
     css.textContent =
-      '.esc-cookies{position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;max-width:560px;margin:0 auto;' +
-      'background:#fefefe;color:#2A1C35;border:1px solid #E2D5EE;border-radius:14px;box-shadow:0 8px 28px rgba(42,28,53,.14);' +
-      'padding:16px 18px;font:400 14px/1.55 "DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;color-scheme:only light}' +
-      '.esc-cookies p{margin:0 0 12px}' +
-      '.esc-cookies__botoes{display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap}' +
-      '.esc-cookies button{font:inherit;font-weight:500;border-radius:999px;padding:8px 18px;cursor:pointer;border:1px solid #C94E76}' +
+      '.esc-cookies{position:fixed;left:0;right:0;bottom:0;z-index:9999;display:flex;align-items:center;gap:12px;' +
+      'background:#fefefe;color:#2A1C35;border-top:1px solid #E2D5EE;box-shadow:0 -4px 16px rgba(42,28,53,.08);' +
+      'padding:10px 16px;font:400 13px/1.4 "DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;color-scheme:only light}' +
+      '.esc-cookies p{margin:0;flex:1 1 auto;min-width:0}' +
+      '.esc-cookies__botoes{display:flex;gap:8px;flex:none}' +
+      '.esc-cookies button{font:inherit;font-weight:500;border-radius:999px;padding:6px 14px;cursor:pointer;border:1px solid #C94E76}' +
       '.esc-cookies__sim{background:#C94E76;color:#fefefe}' +
-      '.esc-cookies__nao{background:transparent;color:#C94E76}';
+      '.esc-cookies__nao{background:transparent;color:#C94E76}' +
+      '@media (min-width:768px){.esc-cookies{justify-content:center}.esc-cookies p{flex:0 1 auto}}';
     document.head.appendChild(css);
 
     var caixa = document.createElement('div');
@@ -44,7 +45,7 @@
     caixa.setAttribute('role', 'dialog');
     caixa.setAttribute('aria-label', 'Aviso de cookies');
     caixa.innerHTML =
-      '<p>Usamos cookies para medir as visitas e mostrar nossos anúncios a quem já conhece este guia. Você pode aceitar ou recusar.</p>' +
+      '<p>Usamos cookies para medir as visitas e mostrar nossos anúncios.</p>' +
       '<div class="esc-cookies__botoes">' +
       '<button type="button" class="esc-cookies__nao">Recusar</button>' +
       '<button type="button" class="esc-cookies__sim">Aceitar</button></div>';
