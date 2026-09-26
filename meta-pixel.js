@@ -18,6 +18,7 @@
     }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
     window.fbq('init', PIXEL_ID);
     window.fbq('track', 'PageView');
+    window.fbq('track', 'ViewContent', { content_name: 'Guia Quando Ela Fala', value: 47, currency: 'BRL' });
   }
 
   document.addEventListener('click', function (e) {
