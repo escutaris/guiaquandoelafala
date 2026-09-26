@@ -674,6 +674,38 @@
   }
 
   /* ── RESPONSIVE ── */
+  .perfis-intro { font-size: 16px; color: var(--medio); font-weight: 300; line-height: 1.8; max-width: 780px; margin: 0 0 28px; }
+  .amostra-titulo { font-family: 'Cormorant Garamond', serif; font-size: clamp(30px, 4vw, 44px); font-weight: 300; color: #fff; line-height: 1.2; margin-bottom: 36px; }
+  .amostra-titulo em { font-style: italic; font-weight: 700; color: var(--pink-claro); }
+  .amostra-card { background: #fff; color: var(--texto); border-radius: 16px; padding: 32px; max-width: 860px; box-shadow: 0 24px 60px rgba(0,0,0,.25); }
+  .amostra-topo { display: flex; align-items: flex-end; gap: 20px; margin-bottom: 24px; }
+  .amostra-topo img { width: 135px; height: auto; flex-shrink: 0; }
+  .amostra-topo h3 { font-size: 24px; font-weight: 700; color: #9B4A9B; text-transform: uppercase; line-height: 1.15; margin-bottom: 8px; letter-spacing: .01em; }
+  .amostra-topo p { font-size: 15px; color: var(--medio); line-height: 1.6; }
+  .amostra-cab, .amostra-linha { display: grid; grid-template-columns: 110px 1fr 1fr; gap: 16px; padding: 14px 4px; border-bottom: 2px solid var(--lilas-bg); }
+  .amostra-cab { background: var(--quente); font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--lilas-escuro); }
+  .amostra-linha { font-size: 15px; line-height: 1.6; }
+  .amostra-perfil { font-weight: 600; color: var(--lilas-escuro); }
+  .amostra-integrada { grid-template-columns: 110px 1fr; }
+  .amostra-nota { font-size: 14px; color: var(--medio); margin-top: 18px; font-style: italic; }
+  .situacoes { margin-top: 44px; }
+  .situacoes-titulo { font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.6); margin-bottom: 16px; }
+  .situacoes ol { columns: 2; column-gap: 40px; padding-left: 22px; color: rgba(255,255,255,.88); font-size: 15px; line-height: 1.5; }
+  .situacoes li { margin-bottom: 10px; break-inside: avoid; }
+  .situacoes li::marker { color: var(--pink-claro); font-weight: 600; }
+  .amostra-cta { margin-top: 36px; display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+  .amostra-cta .btn-pink { max-width: 340px; width: 100%; }
+  .amostra-cta p { font-size: 13px; color: rgba(255,255,255,.6); }
+  @media (max-width: 700px) {
+    .amostra-card { padding: 22px 18px; }
+    .amostra-topo img { width: 96px; }
+    .amostra-topo h3 { font-size: 19px; }
+    .amostra-cab { display: none; }
+    .amostra-linha, .amostra-integrada { grid-template-columns: 1fr; gap: 8px; }
+    .amostra-linha span[data-rotulo]::before { content: attr(data-rotulo); display: block; font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--medio); margin-bottom: 2px; }
+    .situacoes ol { columns: 1; }
+  }
+
   .recebe-icon svg { display: block; color: var(--lilas); }
   .faq-list { border-top: 1px solid var(--linha); }
   .faq-item { border-bottom: 1px solid var(--linha); }
@@ -800,7 +832,8 @@
         <p class="eyebrow">A autora</p>
         <h2>Anos de escuta. <strong>Uma prática possível.</strong></h2>
         <p>Depois de mais de 30 anos entre o consultório e as empresas, e da escrita do livro <em>Quando o Trabalho Dói</em>, a Dra. Ana Paula reuniu situações reais enfrentadas por mulheres no trabalho.</p>
-        <p>Não como teoria distante. Mas como prática possível.</p>
+        <p>Não como teoria distante. Mas como prática possível. O conteúdo nasceu de mais de 10 anos de encontros em círculos com mulheres, em diferentes contextos profissionais.</p>
+        <p>A revisão técnica foi feita pelas psicólogas clínicas Ivoneide Sardinha e Veronilda Lopes e pelo historiador Tarcísio Sant'Ana.</p>
         <p>Dra. Ana Paula Teixeira (CRM-BA 12797 · RQE 7237) é médica do trabalho e especialista em saúde mental nas organizações, com trajetória dedicada à prevenção do adoecimento psíquico e à construção de ambientes profissionais mais conscientes.</p>
         <div class="livros">
           <div class="livro-chip">Quando o Trabalho Dói</div>
@@ -826,10 +859,12 @@
       <div class="check-item"><div class="check-icon">✓</div>Falas para terminar o seu raciocínio, trazer a conversa de volta à pauta e defender o próprio trabalho</div>
       <div class="check-item"><div class="check-icon">✓</div>Três perfis simbólicos que ampliam a percepção sobre como você se comunica</div>
       <div class="check-item"><div class="check-icon">✓</div>Espaços de reflexão individual e coletiva</div>
-      <div class="check-item"><div class="check-icon">✓</div>Plano de ação pessoal de 30 dias</div>
+      <div class="check-item"><div class="check-icon">✓</div>Plano de ação pessoal de 30 dias, com 11 frases-força para os dias difíceis</div>
+      <div class="check-item"><div class="check-icon">✓</div>Dicas de leitura, filmes e músicas, e páginas para as suas anotações</div>
     </div>
     <div class="check-convite">Este não é um material para decorar frases. É um convite para ampliar escolhas.</div>
 
+    <p class="perfis-intro">Os perfis não são rótulos. Em cada situação, o guia mostra duas formas comuns de reagir, a Analítica e a Relacional, cada uma com uma expressão saudável e uma limitante. A Integrada aparece como síntese, o caminho de maior equilíbrio. Você pode transitar entre as três conforme o contexto.</p>
     <div class="perfis-grid">
       <div class="p-card">
         <div class="p-num">Perfil 01</div>
@@ -846,6 +881,69 @@
         <div class="p-nome">A Integrada</div>
         <p class="p-desc">Equilibra visão e ação, intuição e presença. Fala com firmeza e escuta com atenção plena.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ AMOSTRA ══ -->
+<section class="sec sec-dark" id="amostra">
+  <div class="inner-wide">
+    <p class="eyebrow eyebrow-light">Amostra</p>
+    <p class="amostra-titulo">Uma das 16 situações, <em>como está no guia.</em></p>
+
+    <article class="amostra-card">
+      <div class="amostra-topo">
+        <img src="data:image/jpeg;base64,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" alt="Ilustração de uma mulher com a mão na testa" width="135" height="181">
+        <div>
+          <h3>Quando sua ideia é desconsiderada</h3>
+          <p>Sua proposta é ignorada ou rejeitada, até que um homem a reformule e seja acolhido.</p>
+        </div>
+      </div>
+      <div class="amostra-tabela">
+        <div class="amostra-cab"><span>Perfil</span><span>Expressão saudável</span><span>Expressão limitante</span></div>
+        <div class="amostra-linha">
+          <span class="amostra-perfil">Analítica</span>
+          <span data-rotulo="Expressão saudável">“Interessante ver que a proposta reapareceu. Foi exatamente o que sugeri anteriormente.”</span>
+          <span data-rotulo="Expressão limitante">“Acho que não sou levada a sério… melhor não propor de novo.”</span>
+        </div>
+        <div class="amostra-linha">
+          <span class="amostra-perfil">Relacional</span>
+          <span data-rotulo="Expressão saudável">“Fico feliz que a ideia tenha sido bem recebida. Sinto que minha fala anterior passou despercebida.”</span>
+          <span data-rotulo="Expressão limitante">“Tá tudo bem, o importante é o grupo.”</span>
+        </div>
+        <div class="amostra-linha amostra-integrada">
+          <span class="amostra-perfil">Integrada</span>
+          <span>“Essa proposta foi apresentada por mim anteriormente. Que bom que agora podemos avançar com ela.”</span>
+        </div>
+      </div>
+      <p class="amostra-nota">Depois de cada situação, o guia traz perguntas para reflexão pessoal e em grupo.</p>
+    </article>
+
+    <div class="situacoes">
+      <p class="situacoes-titulo">As 16 situações do guia</p>
+      <ol>
+        <li>Quando há insinuações sexuais</li>
+        <li>Quando esperam que ela faça o chá ou organize o ambiente</li>
+        <li>Quando comentam sobre sua aparência ou roupa</li>
+        <li>Quando é acusada de estar na TPM ou menstruada</li>
+        <li>Quando presumem que ela é menos competente que os colegas homens</li>
+        <li>Quando há piadas sexistas</li>
+        <li>Quando ela recebe salário menor que os homens na mesma função</li>
+        <li>Quando presumem que ela é mais "júnior" do que é</li>
+        <li>Quando esperam que ela mantenha o escritório arrumado</li>
+        <li>Quando falam por ela ou a interrompem em reuniões</li>
+        <li>Quando sofre discriminação por maternidade</li>
+        <li>Quando há conflitos entre mulheres por projetos, atenção ou liderança</li>
+        <li>Mansplaining</li>
+        <li>Gaslighting</li>
+        <li>Manterrupting</li>
+        <li>Quando sua ideia é desconsiderada</li>
+      </ol>
+    </div>
+
+    <div class="amostra-cta">
+      <a href="https://chk.eduzz.com/zbebpouq" class="btn-pink">Quero o guia por R$ 47</a>
+      <p>Guia em PDF · 33 páginas · 7 dias de garantia</p>
     </div>
   </div>
 </section>
@@ -885,7 +983,7 @@
       <div class="recebe-item">
         <div class="recebe-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg></div>
         <h3>Guia completo em PDF</h3>
-        <p>Material estruturado com 16 situações, perfis, reflexões e plano de ação</p>
+        <p>33 páginas com as 16 situações, os perfis, espaços de reflexão e o plano de ação</p>
       </div>
       <div class="recebe-item">
         <div class="recebe-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></div>
@@ -908,7 +1006,7 @@
     <div class="faq-list">
       <details class="faq-item">
         <summary>É um livro físico, um curso ou um PDF?</summary>
-        <p>É um guia em PDF. Você baixa o arquivo e lê no computador, no tablet ou no celular. Se preferir, pode imprimir.</p>
+        <p>É um guia em PDF de 33 páginas. Você baixa o arquivo e lê no computador, no tablet ou no celular. Se preferir, pode imprimir.</p>
       </details>
       <details class="faq-item">
         <summary>Como recebo o guia?</summary>
@@ -919,8 +1017,12 @@
         <p>Traz exemplos do que dizer em cada uma das 16 situações, com espaço para você refletir. Os exemplos são ponto de partida: você adapta ao seu jeito e ao contexto em que trabalha.</p>
       </details>
       <details class="faq-item">
+        <summary>Como funciona o plano de ação de 30 dias?</summary>
+        <p>São cinco perguntas para você responder por escrito: o que deseja transformar, cinco ações práticas para os próximos 30 dias, os apoios de que precisa, como vai acompanhar o progresso e o que lembrar quando a mudança ficar difícil. Para essa última, o guia traz 11 frases-força para você escolher ou criar a sua.</p>
+      </details>
+      <details class="faq-item">
         <summary>Posso usar o guia com grupos que eu conduzo?</summary>
-        <p>Pode. A licença de uso profissional já vem incluída: você pode projetar o guia, imprimir páginas para as participantes e usar em encontros e mentorias, inclusive pagos, sem custo por participante. Só não pode revender, redistribuir ou publicar o arquivo.</p>
+        <p>Pode. O guia traz uma página de instruções para facilitadoras, e a licença de uso profissional já vem incluída: você pode projetar o guia, imprimir páginas para as participantes e usar em encontros e mentorias, inclusive pagos, sem custo por participante. Só não pode revender, redistribuir ou publicar o arquivo.</p>
       </details>
       <details class="faq-item">
         <summary>Como peço o reembolso?</summary>
